@@ -1,13 +1,13 @@
-package com.example.exam.controller;
+package com.example.exam.parsing;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 
-public class Parsing {
+public class ParsingHtml {
     //html 받아오기
-    public void getHtml(String urlPath) {
+    public String getHtml(String urlPath) {
         String pageContents;
         StringBuilder contents = new StringBuilder();
 
@@ -27,10 +27,11 @@ public class Parsing {
 
             buff.close();
 
-            System.out.println(contents);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return contents.toString();
     }
+    // 파싱하기
+
 }
