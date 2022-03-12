@@ -30,6 +30,21 @@
   + 나머지 ‘b3’
 
 
+### 깃 Commit 규칙
++ 커밋 단위는 기능당 한개
++ 커밋 메시지 통일성 있게 
++ [앵귤러 커밋 컨벤션 참고](https://velog.io/@outstandingboy/Git-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%8B%9C%EC%A7%80-%EA%B7%9C%EC%95%BD-%EC%A0%95%EB%A6%AC-the-AngularJS-commit-conventions)
+
+  + feat : 새로운 기능 추가
+  + fix : 버그 수정
+  + docs : 문서 관련
+  + style : 스타일 변경 (포매팅 수정, 들여쓰기 추가, …)
+  + refactor : 코드 리팩토링
+  + test : 테스트 관련 코드
+  + build : 빌드 관련 파일 수정
+  + chore : 그 외 자잘한 수정
+  
+
 ### 구현 사진
 
 ![image](https://user-images.githubusercontent.com/26866859/158022303-b370f89d-41ed-4516-9c0d-d11bc648b67d.png)
