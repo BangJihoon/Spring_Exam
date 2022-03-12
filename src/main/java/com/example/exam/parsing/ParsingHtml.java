@@ -5,7 +5,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
-import java.util.regex.Pattern;
 
 public class ParsingHtml {
     //html 받아오기
@@ -22,7 +21,6 @@ public class ParsingHtml {
             BufferedReader buff = new BufferedReader(reader);
 
             while ((pageContents = buff.readLine()) != null) {
-                //System.out.println(pageContents);
                 contents.append(pageContents);
                 contents.append("\r\n");
             }
