@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www/thymeleaf.com">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,41 +14,44 @@
     <div class="input-form-backgroud row">
         <div class="input-form col-md-12 mx-auto">
             <h4 class="mb-3">과제 설명</h4>
-            <form class="validation-form" novalidate>
+
+            <form class="validation-form" novalidate action="parsing" method="post">
                 <div class="row">
                     <div class="col-md-12 mb-3">
-                        <label for="name">URL</label>
-                        <input type="text" class="form-control" id="name" placeholder="https://www.naver.com" value="" required>
+                        <label >URL</label>
+                        <input type="text" class="form-control" id="url" placeholder="예시) https://www.naver.com"  required="false">
                         <div class="invalid-feedback"> URL을 입력해주세요. </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12 mb-3">
-                        <label for="name">TYPE</label>
-                        <select class="custom-select d-block w-100" id="root">
-                            <option>HTML 태그 제외</option>
-                            <option>TEXT 전체</option>
+                        <label>TYPE</label>
+                        <select class="custom-select d-block w-100" id="type" >
+                            <option value="1">HTML 태그 제외</option>
+                            <option value="2">TEXT 전체</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12 mb-3">
-                        <label for="code">출력 묶음 단위</label>
-                        <input type="number" class="form-control" id="code" required>
+                        <label>출력 묶음 단위</label>
+                        <input type="number" class="form-control" id="bundle" required="false">
                         <div class="invalid-feedback"> 출력 묶음 단위를 정수로 입력해주세요. </div>
                     </div>
                 </div>
 
                 <br/>
-                <button class="btn btn-primary btn-lg btn-block" type="submit">출력</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" >출력</button>
                 <br/>
+
+            </form>
 
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <label >몫</label>
-                        <textarea type="textarea" class="form-control" id="code1" >
+                        <textarea th:value="${share}" th:text="${share}" type="textarea" class="form-control" id="code1" >
                         </textarea>
                     </div>
                 </div>
@@ -56,11 +59,10 @@
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <label>나머지</label>
-                        <textarea type="text" class="form-control" id="code2"  >
+                        <textarea th:value="${remain}" th:text="${remain}" type="text" class="form-control" id="code2"  >
                         </textarea>
                     </div>
                 </div>
-            </form>
         </div>
     </div>
 </div>
