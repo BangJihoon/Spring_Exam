@@ -8,7 +8,7 @@
   + Java 11 / Gradle / Spring 2.6.1
 
 
-### 내용 
+### 구현 문제
 1. URL 
   + 입력을 하면 그 링크 안에있는 모든 HTML코드를 불러온다.
 2. 노출 유형
@@ -30,7 +30,7 @@
   + 나머지 ‘b3’
 
 
-### 구현 내용
+### 구현 사진
 
 ![image](https://user-images.githubusercontent.com/26866859/158022303-b370f89d-41ed-4516-9c0d-d11bc648b67d.png)
 
