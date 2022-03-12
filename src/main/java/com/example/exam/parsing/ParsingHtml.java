@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
+import java.util.regex.Pattern;
 
 public class ParsingHtml {
     //html 받아오기
@@ -33,5 +34,16 @@ public class ParsingHtml {
         return contents.toString();
     }
     // 파싱하기
+    public String result(String html, int type){
+        String pattern="";
+        if(type ==1){
+            pattern = "<[^>]*>"; // 태그내용 제거
+        }else if(type ==2){
+            pattern = "[^0-9a-zA-Z]"; // 영어 숫자 모두 남김
+        }
+        html = html.replaceAll(pattern,"");
+
+        return html;
+    }
 
 }
